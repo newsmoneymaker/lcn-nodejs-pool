@@ -1,7 +1,9 @@
-// flexhash: share validation helper of the Kylacoin/Lyncoin pools.
-// Flex sources (hasher/flex-src/) are copied verbatim from the coin's own node (src/crypto/flex/),
-// not borrowed from any other project -- see the critical-wrong-randomx-variant-bug lesson: a
-// sibling algorithm/fork can have different parameters and silently compute the wrong hash.
+// flexhash: share validation helper of the Lyncoin pool.
+// Flex sources (hasher/flex-src/) are copied verbatim from LYNCOIN's own node (src/crypto/flex/ on srv2's
+// lcn-src), NOT Kylacoin's -- see the critical-wrong-randomx-variant-bug lesson: a sibling algorithm/fork
+// can have different parameters and silently compute the wrong hash. Verified byte-for-byte against the
+// live node's own cnfiles/crypto/aesb.c (2026-10-13): it's the slow, portable, software-table AES (no
+// AES-NI) -- that's genuinely what the live network uses for this coin's PoW, not a porting bug.
 // Call convention matches the node's own CBlockHeader::GetPoWHash() (src/hash.h):
 //   flex_hash(buffer.data(), buffer.size(), result.begin())  -- 80 byte header in, 32 byte hash out.
 //

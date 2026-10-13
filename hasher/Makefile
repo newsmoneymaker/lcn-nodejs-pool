@@ -1,5 +1,5 @@
-# flexhash: Kylacoin/Lyncoin's OWN Flex sources (copied from kylacoin/src/crypto/flex, not borrowed from
-# another coin -- see the critical-wrong-randomx-variant-bug lesson). GPL/MIT mixed, see headers in flex-src/.
+# flexhash: Lyncoin's OWN Flex sources (copied from the coin's own node's src/crypto/flex/, NOT Kylacoin's --
+# see the critical-wrong-randomx-variant-bug lesson). GPL/MIT mixed, see headers in flex-src/.
 #   make            (STATIC=-static makes a binary that runs on any Linux)
 CXX ?= g++
 CC ?= gcc
